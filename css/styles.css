@@ -1,0 +1,33 @@
+/* Mobile Navbar Styling */
+@media only screen and (max-width: 567px) {
+    .navbar-toggler {
+        float: right;
+    }
+
+    .navbar-collapse {
+        clear: both;
+    }
+}
+
+/* Navbar Styling */
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+}
+
+.navbar .navbar-container {
+    width: 83.33%;
+    margin: 0 auto 0 auto;
+}
+
+.navbar-collapse {
+    float: right;
+    padding: 0.5em 0 0.5em 0;
+}
+
+.navbar-collapse .nav-item {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
