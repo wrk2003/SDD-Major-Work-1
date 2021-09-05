@@ -1,11 +1,17 @@
 /* Mobile Navbar Styling */
-@media only screen and (max-width: 567px) {
+@media screen and (max-width: 800px) {
     .navbar-toggler {
         float: right;
+        margin-top: 0.5em;
     }
 
     .navbar-collapse {
-        clear: both;
+        float: none !important;
+        text-align: center;
+    }
+
+    .desktop-only {
+        display: none;
     }
 }
 
