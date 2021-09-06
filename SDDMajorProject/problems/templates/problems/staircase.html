@@ -1,0 +1,21 @@
+{% extends '../generic_page.html' %}
+{% block content %}
+    <div class="container-fluid coding-body">
+        <div class="row">
+            <div class="col">
+                <p>{{ prompt }}</p>
+            </div>
+            <div class="col">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit" class="btn btn-primary"/>
+                </form>
+            </div>
+        </div>
+        
+        {% for value in pass_fail %}
+            <li class="text-success">{{ value }}</li>
+        {% endfor %}
+    </div>
+{% endblock %}

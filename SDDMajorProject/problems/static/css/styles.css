@@ -58,3 +58,27 @@
     padding: 0;
 }
 
+
+/* Styling the coding area */
+
+.coding-body {
+    height: calc(100vh - 76px);
+    margin: 76px 0 0 0;
+    width: 100vw;
+}
+
+.coding-body .col {
+    height: calc(0.4 * (100vh - 76px));
+    outline: 1px solid black;
+}
+
+.coding-body .col textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    overflow-y: scroll;
+}
+
+.coding-body input[type="submit"]:hover {
+    background-color: green;
+}

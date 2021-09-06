@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% block title %}<title>Document</title>{% endblock %}
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -18,14 +18,16 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
 </head>
 <body>
+    {% block nav %}
     <div class="container-fluid" style="padding:0;">
         <header>
-            <div class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
                 <div class="navbar-container">
-                    <a href="#" class="navbar-brand"><img src="./res/svg/logo.svg" width="50" height="50"> C.O.T.</a>
+                    <a href="#" class="navbar-brand">{% load static %}<img src="{% static 'res/svg/logo.svg' %}" width="50" height="50"> C.O.T.</a>
 
                     <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
@@ -43,7 +45,7 @@
                                 <a href="#" class="nav-link desktop-only">Tutorials</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link desktop-only">Problems</a>
+                                <a href="{% url 'index' %}" class="nav-link desktop-only">Problems</a>
                             </li>
                         </ul>
                     </div>
@@ -51,5 +53,7 @@
             </div>
         </header>
     </div>
+    {% endblock %}
+    {% block content %}{% endblock %}
 </body>
 </html>
